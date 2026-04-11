@@ -1,3 +1,14 @@
+---
+// src/layouts/Layout.astro
+
+// MarkdownのFrontmatterからデータを受け取るための魔法の書き方
+const { frontmatter } = Astro.props;
+
+// titleをfrontmatterから取得。なければ直接のpropsから取得。
+const title = frontmatter?.title || Astro.props.title || "デフォルトタイトル";
+---
+
+
 <!doctype html>
 <html lang="en">
 	<head>
